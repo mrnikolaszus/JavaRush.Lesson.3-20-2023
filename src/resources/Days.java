@@ -1,3 +1,5 @@
+package resources;
+
 public enum Days {
     SUNDAY,
     MONDAY,
