@@ -20,7 +20,8 @@ public class Lead extends Employee implements Delegator{
     @Override
     public void leftTheWorkplace() {
         if(this.isWorking()){
-            setBonusCount(2);
+            setTotalDays(1);
+            setBonusCount(DAY_BONUS);
             System.out.println(this.getName() + " " + this.getClass() + " " + "Left the Workplace");
             setWorking(false);}
         else { System.out.println(this.getName() + " " + this.getClass() + " " + "wasn't at the Workplace");}

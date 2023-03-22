@@ -8,18 +8,23 @@ import java.util.Optional;
 public abstract class Employee {
     private boolean isWorking;
     private String name;
-    private  int dayBonusCount;
-    private double rating;
+    private  int dayBonusCount;;
     private final ArrayList<Task> tasks;
+    private int totalDays;
+
 
     public Employee(String name) {
         this.name = name;
         this.dayBonusCount =0;
-        this.rating = 0;
         this.isWorking = false;
         this.tasks = new ArrayList<>();
+        this.totalDays = 0;
     }
 
+    public void rating(){
+        System.out.println("Employee Rating:" + this.getBonusCount()/this.getTotalDays());
+
+    }
 
     // entering workSpace
     abstract public void cameToTheWorkplace(Days d);
@@ -57,19 +62,19 @@ public abstract class Employee {
     }
 
 
-
-
-    public void setRating(double rating) {
-        this.rating = rating;
-    }
-    public double getRating() {
-        return rating;
-    }
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getTotalDays() {
+        return totalDays;
+    }
+
+    public void setTotalDays(int totalDays) {
+        this.totalDays += totalDays;
     }
 
     @Override

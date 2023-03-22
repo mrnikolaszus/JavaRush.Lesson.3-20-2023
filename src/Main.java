@@ -25,31 +25,26 @@ public class Main {
         John.addTask(new Task("add new DataBase"));
         John.addTask(new Task("fix Bugs"));
 
-        System.out.println(John.getTasks());
         John.delegate(Bob);
         System.out.println( "tasks left "+ John.getTasks().size());
 
 
         System.out.println("Bob starts to work");
-        System.out.println(Bob.getTasks());
         Bob.delegate(Mark);
         System.out.println( "tasks left "+ Bob.getTasks().size());
 
         System.out.println("Mark starts to work");
-        System.out.println(Mark.getTasks());
         Mark.executeTask();
 
 
-
         John.leftTheWorkplace();
-        System.out.println(John +" Today's Bonuses: "+ John.getBonusCount());
+        John.rating();
 
         Bob.leftTheWorkplace();
-        System.out.println(Bob +" Today's Bonuses: "+ Bob.getBonusCount());
+        Bob.rating();
 
         Mark.leftTheWorkplace();
-        System.out.println(Mark +" Today's Bonuses: "+ Mark.getBonusCount());
-
+        Mark.rating();
     }
 
 

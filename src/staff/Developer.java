@@ -18,7 +18,8 @@ public class Developer extends Employee implements Executor {
     @Override
     public void leftTheWorkplace() {
         if(this.isWorking()){
-            setBonusCount(3);
+            setTotalDays(1);
+            setBonusCount(DAY_BONUS);
             System.out.println(this.getName() + " " + this.getClass() + " " + "Left the Workplace");
             setWorking(false);}
         else { System.out.println(this.getName() + " " + this.getClass() + " " + "wasn't at the Workplace");}
